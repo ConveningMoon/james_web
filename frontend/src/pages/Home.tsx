@@ -1,10 +1,18 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
+import ContentHome from '../components/ContentHome';
 
 const Home: React.FC = () => {
+  const homeStyle: React.CSSProperties = {
+    backgroundColor: '#232226',
+    minHeight: '100vh',
+    display: 'flex'
+  };
+
   return (
-    <div>
-      <h1>Welcome to Our Construction Company</h1>
-      <p>We offer the best construction services.</p>
+    <div style={homeStyle}>
+      <Navbar />
+      <ContentHome />
     </div>
   );
 };
