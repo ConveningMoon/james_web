@@ -1,0 +1,11 @@
+.homeStyle {
+    background-color: #232226;
+    min-height: 100vh;
+    display: flex;
+}
+
+@media (max-width: 1175px) {
+    .homeStyle {
+        flex-direction: column;
+    }
+}

@@ -14,8 +14,14 @@
     height: fit-content;
 }
 
-.userImage {
+.portraitContainer {
+    display: flex;
     width: 100%;
+    justify-content: center;
+}
+
+.userImage {
+    width: 70%;
 }
 
 .myName, .myProfession {
@@ -26,42 +32,149 @@
 .myName {
     font-family: "Oswald", sans-serif;
     font-size: 50px;
+    line-height: 60px;
     color: var(--dark);
 }
 
 .myProfession {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
-    padding-top: 5px;
+    padding-top: 15px;
     color: var(--dark-green);
 }
 
-.icon {
-    display: flex;
-    padding-top: 30px;
-    width: fit-content;    
-}
-/* 
+
 .navbar {
     display: flex;
+    /* background-color: aqua; */
+    width: 100%;
     justify-content: center;
     align-items: center;
+    margin: 0px;
 }
 
 .navLinks {
     display: flex;
+    flex-direction: column;
     list-style: none;
+    justify-content: center;
+    align-items: flex-start;
     font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    padding-inline: 0;
+    padding-block: 20px;
     font-weight: 900;
+}
+
+.navLinks li {
+    padding-block: 15px;
+    text-align: center;
 }
 
 .link {
     color: var(--dark);
-    margin: 0 30px;
     text-decoration: none;
     transition: color 0.3s;
+    padding-bottom: 5px;
+        background:
+        linear-gradient(
+            to right,
+            var(--dark-green),
+            var(--mint-green)
+        ),
+        linear-gradient(
+            to right,
+            var(--light-blue),
+            var(--dark-blue),
+            var(--dark)
+        );
+        background-size: 100% 3px, 0 3px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 400ms;
 }
 
 .link:hover {
     color: var(--dark-green);
-} */
+    background-size: 0 3px, 100% 3px;
+}
+
+.meContactContainer {
+    display: flex;
+    padding-top: 50px;
+    width: 100%;    
+    justify-content: center;
+}
+
+@media (max-width: 1175px) {
+    .header {
+        max-width: 100%;
+    }
+
+    .personalInfo {
+        flex-direction: row;        
+        align-items: stretch;
+    }
+
+    .portraitContainer {
+        align-items: flex-end;
+        flex: 1;
+    }
+
+    .meContainer {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        margin-right: 30px;
+        width: fit-content;
+        height: 100%;
+        padding-top: 20px;
+    }
+
+    .meInfoContainer {
+        order: 1;
+    }
+
+    .myName, .myProfession {
+        text-align: left;
+    }
+
+    .navbar {
+        order: 3
+    }
+
+    .navLinks {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 100px;        
+    }
+
+    .link {
+        font-size: 20px;
+    }
+
+    .meContactContainer {
+        order: 2;
+        padding-top: 20px;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 915px) {
+    .navLinks {
+        flex-direction: column;
+        margin-top: 20px;
+        align-items: flex-start;
+    }
+
+    .meContainer {
+        padding-left: 20px;
+        flex: 1;
+    }
+
+    .portraitContainer {
+        flex: 0;
+    }
+}
