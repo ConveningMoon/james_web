@@ -4,7 +4,7 @@ import ClickableIcon from './ClickableIcon';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC = React.memo(() => {
   const handleGitHubIconClick = () => {
     window.open('https://github.com/ConveningMoon', '_blank');
   };
@@ -44,6 +44,6 @@ const Navbar: React.FC = () => {
       </section>          
     </header>
   );
-}
+});
 
 export default Navbar;
