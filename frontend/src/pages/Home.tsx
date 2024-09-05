@@ -13,8 +13,6 @@ const Home: React.FC = () => {
     <div className={styles.homeStyle}>
       <Suspense fallback={<div>Loading content...</div>}>
         <LazyNavbar />
-      </Suspense>
-      <Suspense fallback={<div>Loading content...</div>}>
         <LazyContentHome />
       </Suspense>
       <SpeedInsights />
