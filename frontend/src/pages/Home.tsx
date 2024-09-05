@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
 import ContentHome from '../components/ContentHome';
 import styles from './styles/Home.module.css';
