@@ -3,8 +3,9 @@ import styles from './styles/Navbar.module.css';
 import ClickableIcon from './ClickableIcon';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import LazyLoad from 'react-lazyload';
 
-const Navbar: React.FC = React.memo(() => {
+const Navbar: React.FC = () => {
   const handleGitHubIconClick = () => {
     window.open('https://github.com/ConveningMoon', '_blank');
   };
@@ -21,7 +22,9 @@ const Navbar: React.FC = React.memo(() => {
     <header className={styles.header}>
       <section className={styles.personalInfo}>
         <div className={styles.portraitContainer}>
-          <img src='/menExample.jpg' alt='MePortrait' className={styles.userImage} /> 
+          <LazyLoad height={200}>
+            <img src='/menExample.jpg' alt='MePortrait' className={styles.userImage} /> 
+          </LazyLoad>
         </div>
         <div className={styles.meContainer}>
           <div className={styles.meInfoContainer}>
@@ -44,6 +47,6 @@ const Navbar: React.FC = React.memo(() => {
       </section>          
     </header>
   );
-});
+};
 
 export default Navbar;
