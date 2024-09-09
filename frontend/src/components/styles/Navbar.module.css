@@ -2,7 +2,7 @@
     display: flex;
     background-color: white;
     max-width: 20%;
-    padding-inline: 15px;
+    /* padding-inline: 15px; */
 }
 
 .personalInfo {
@@ -18,10 +18,13 @@
     display: flex;
     width: 100%;
     justify-content: center;
+    align-items: center;
 }
 
 .userImage {
-    width: 70%;
+    /* width: 70%; */
+    width: 100%;
+    padding-bottom: 20px;
 }
 
 .myName, .myProfession {
@@ -114,6 +117,11 @@
     .personalInfo {
         flex-direction: row;        
         align-items: stretch;
+    }
+
+    .userImage {
+        padding-bottom: 0;
+        padding-right: 20px;
     }
 
     .portraitContainer {

@@ -3,7 +3,6 @@ import styles from './styles/Navbar.module.css';
 import ClickableIcon from './ClickableIcon';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-import LazyLoad from 'react-lazyload';
 
 const Navbar: React.FC = () => {
   const handleGitHubIconClick = () => {
@@ -22,9 +21,7 @@ const Navbar: React.FC = () => {
     <header className={styles.header}>
       <section className={styles.personalInfo}>
         <div className={styles.portraitContainer}>
-          <LazyLoad height={200}>
-            <img src='/menExample.jpg' alt='MePortrait' className={styles.userImage} /> 
-          </LazyLoad>
+            <img src='/me_photo.jpg' alt='MePortrait' className={styles.userImage} /> 
         </div>
         <div className={styles.meContainer}>
           <div className={styles.meInfoContainer}>

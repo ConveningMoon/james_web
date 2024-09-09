@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import LazyLoad from 'react-lazyload';
 import styles from './styles/ContentHome.module.css';
 
 const ContentHome: React.FC = () => {
@@ -60,27 +59,17 @@ const ContentHome: React.FC = () => {
         </section>  
         {imgOpened &&
           <div className={styles.overlay} onClick={onCloseImage}>
-            <LazyLoad height={200}>
               <img src={imgName} alt="ImageOpened" className={isVerticalImg ? styles.projectImage_openedV : styles.projectImage_openedH} onClick={onCloseImage}/>
-            </LazyLoad>
           </div> 
         }       
         <section className={styles.contentSection} id='projects'>
           <h1 className={styles.contentTitle}>PROJECTS AND CERTIFICATES</h1>
           <div className={styles.project_1_Container}>      
             <div className={styles.project_1_ImageContainer}>
-              <LazyLoad height={200}>
               <img src="/bachelor_degree.jpg" alt="BachelorDegree" className={styles.projectImage_closed} onClick={() => onOpenImage("/bachelor_degree.jpg", false)}/>
-              </LazyLoad>
-              <LazyLoad height={200}>
               <img src="/entrepreneurship_certificate.jpg" alt="EntrepreneurshipCertificate" className={styles.projectImage_closed} onClick={() => onOpenImage("/entrepreneurship_certificate.jpg", false)}/>
-              </LazyLoad>
-              <LazyLoad height={200}>
               <img src="/startup_as_degree_program.jpg" alt="StartupAsDegreeProgram" className={styles.projectImage_closed} onClick={() => onOpenImage("/startup_as_degree_program.jpg", false)}/>
-              </LazyLoad>
-              <LazyLoad height={200}>
               <img src="/startup_guide_program.jpg" alt="StartupGuideProgram" className={styles.projectImage_closed} onClick={() => onOpenImage("/startup_guide_program.jpg", false)}/>
-              </LazyLoad>
             </div>
             <div className={styles.projectDescriptionContainer} style={{marginLeft: '0'}}>
               <h2 className={styles.projectTitle}>LUPA • Full-Stack Project with AI</h2>
@@ -91,9 +80,7 @@ const ContentHome: React.FC = () => {
             </div>           
           </div>
           <div className={styles.project_2_Container}>
-            <LazyLoad height={200}>
             <img src="/programming_specialist.jpg" alt="ProgrammingSpecialist" className={styles.projectImage_closed} onClick={() => onOpenImage("/programming_specialist.jpg", false)}/>
-            </LazyLoad>
             <div className={styles.projectDescriptionContainer}>
               <h2 className={styles.projectTitle}>Specialization in programming • Multiple Small Projects</h2>
               <p className={styles.projectDescription}>
@@ -103,9 +90,7 @@ const ContentHome: React.FC = () => {
           </div>
           <div className={styles.projects_3_Container}>
             <div className={styles.project_3_SubContainer}>
-              <LazyLoad height={200}>
               <img src="/AI_concourse.jpg" alt="AIConcourse" className={styles.projectImage_closed} onClick={() => onOpenImage("/AI_concourse.jpg", true)}/>
-              </LazyLoad>
               <div className={styles.projectDescriptionContainer}>
                 <h2 className={styles.projectTitle}>Post Office Work Process • AnyLogic AI Simulation</h2>
                 <p className={styles.projectDescription}>
@@ -114,9 +99,7 @@ const ContentHome: React.FC = () => {
               </div>           
             </div>
             <div className={styles.project_3_SubContainer}>
-              <LazyLoad height={200}>
               <img src="/russian_certificate.jpg" alt="RussianCertificate" className={styles.projectImage_closed} onClick={() => onOpenImage("/russian_certificate.jpg", true)}/>
-              </LazyLoad>
               <div className={styles.projectDescriptionContainer}>
                 <h2 className={styles.projectTitle}>Russian Engineering Certificate • Professional Ability to Work in Russian Language </h2>
                 <p className={styles.projectDescription}>
@@ -126,9 +109,6 @@ const ContentHome: React.FC = () => {
             </div>            
           </div>
         </section>
-        {/* <section className={styles.contentSection}>
-          <p>Test</p>
-        </section> */}
       </main>
       <footer className={styles.footerContainer}>
         <p className={styles.footerText}>
