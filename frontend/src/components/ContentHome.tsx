@@ -6,6 +6,16 @@ const ContentHome: React.FC = () => {
   const [imgName, setImageName] = useState('');
   const [isVerticalImg, setIsVerticalImg] = useState(true);
 
+  // const imagesToLoad = [
+  //   '/bachelor_degree.jpg', 
+  //   '/entrepreneurship_certificate.jpg',
+  //   '/startup_as_degree_program.jpg',
+  //   '/startup_guide_program.jpg',
+  //   '/programming_specialist.jpg',
+  //   '/AI_concourse.jpg',
+  //   '/russian_certificate.jpg'
+  // ];
+
   function onCloseImage(): void {
     setImgOpened(false);
   };
@@ -66,10 +76,10 @@ const ContentHome: React.FC = () => {
           <h1 className={styles.contentTitle}>PROJECTS AND CERTIFICATES</h1>
           <div className={styles.project_1_Container}>      
             <div className={styles.project_1_ImageContainer}>
-              <img src="/bachelor_degree.jpg" alt="BachelorDegree" className={styles.projectImage_closed} onClick={() => onOpenImage("/bachelor_degree.jpg", false)}/>
-              <img src="/entrepreneurship_certificate.jpg" alt="EntrepreneurshipCertificate" className={styles.projectImage_closed} onClick={() => onOpenImage("/entrepreneurship_certificate.jpg", false)}/>
-              <img src="/startup_as_degree_program.jpg" alt="StartupAsDegreeProgram" className={styles.projectImage_closed} onClick={() => onOpenImage("/startup_as_degree_program.jpg", false)}/>
-              <img src="/startup_guide_program.jpg" alt="StartupGuideProgram" className={styles.projectImage_closed} onClick={() => onOpenImage("/startup_guide_program.jpg", false)}/>
+              <img src="/bachelor_degree.webp" alt="BachelorDegree" className={styles.projectImage_closed} onClick={() => onOpenImage("/bachelor_degree.webp", false)}/>
+              <img src="/entrepreneurship_certificate.webp" alt="EntrepreneurshipCertificate" className={styles.projectImage_closed} onClick={() => onOpenImage("/entrepreneurship_certificate.webp", false)} loading='lazy'/>
+              <img src="/startup_as_degree_program.webp" alt="StartupAsDegreeProgram" className={styles.projectImage_closed} onClick={() => onOpenImage("/startup_as_degree_program.webp", false)} loading='lazy'/>
+              <img src="/startup_guide_program.webp" alt="StartupGuideProgram" className={styles.projectImage_closed} onClick={() => onOpenImage("/startup_guide_program.webp", false)} loading='lazy'/>
             </div>
             <div className={styles.projectDescriptionContainer} style={{marginLeft: '0'}}>
               <h2 className={styles.projectTitle}>LUPA • Full-Stack Project with AI</h2>
@@ -80,7 +90,7 @@ const ContentHome: React.FC = () => {
             </div>           
           </div>
           <div className={styles.project_2_Container}>
-            <img src="/programming_specialist.jpg" alt="ProgrammingSpecialist" className={styles.projectImage_closed} onClick={() => onOpenImage("/programming_specialist.jpg", false)}/>
+            <img src="/programming_specialist.webp" alt="ProgrammingSpecialist" className={styles.projectImage_closed} onClick={() => onOpenImage("/programming_specialist.webp", false)} loading='lazy'/>
             <div className={styles.projectDescriptionContainer}>
               <h2 className={styles.projectTitle}>Specialization in programming • Multiple Small Projects</h2>
               <p className={styles.projectDescription}>
@@ -90,7 +100,7 @@ const ContentHome: React.FC = () => {
           </div>
           <div className={styles.projects_3_Container}>
             <div className={styles.project_3_SubContainer}>
-              <img src="/AI_concourse.jpg" alt="AIConcourse" className={styles.projectImage_closed} onClick={() => onOpenImage("/AI_concourse.jpg", true)}/>
+              <img src="/AI_concourse.webp" alt="AIConcourse" className={styles.projectImage_closed} onClick={() => onOpenImage("/AI_concourse.webp", true)} loading='lazy'/>
               <div className={styles.projectDescriptionContainer}>
                 <h2 className={styles.projectTitle}>Post Office Work Process • AnyLogic AI Simulation</h2>
                 <p className={styles.projectDescription}>
@@ -99,7 +109,7 @@ const ContentHome: React.FC = () => {
               </div>           
             </div>
             <div className={styles.project_3_SubContainer}>
-              <img src="/russian_certificate.jpg" alt="RussianCertificate" className={styles.projectImage_closed} onClick={() => onOpenImage("/russian_certificate.jpg", true)}/>
+              <img src="/russian_certificate.webp" alt="RussianCertificate" className={styles.projectImage_closed} onClick={() => onOpenImage("/russian_certificate.webp", true)} loading='lazy'/>
               <div className={styles.projectDescriptionContainer}>
                 <h2 className={styles.projectTitle}>Russian Engineering Certificate • Professional Ability to Work in Russian Language </h2>
                 <p className={styles.projectDescription}>

@@ -10,7 +10,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.105",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "axios": "^1.7.4",
@@ -20,6 +19,7 @@
     "react-lazyload": "^3.2.1",
     "react-router-dom": "^6.26.0",
     "react-scripts": "^5.0.1",
+    "serve": "^14.2.3",
     "styled-components": "^6.1.12",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
@@ -49,7 +49,12 @@
     ]
   },
   "devDependencies": {
+    "@types/node": "^22.5.5",
     "@types/react-lazyload": "^3.2.3",
-    "@types/retry": "^0.12.5"
+    "@types/retry": "^0.12.5",
+    "critical": "^7.2.0",
+    "critters-webpack-plugin": "^3.0.2",
+    "node-fetch": "^3.3.2",
+    "ts-node": "^10.9.2"
   }
 }

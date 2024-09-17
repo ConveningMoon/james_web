@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
     <header className={styles.header}>
       <section className={styles.personalInfo}>
         <div className={styles.portraitContainer}>
-            <img src='/me_photo.jpg' alt='MePortrait' className={styles.userImage} /> 
+            <img src='/me_photo.webp' alt='MePortrait' className={styles.userImage} loading='lazy'/> 
         </div>
         <div className={styles.meContainer}>
           <div className={styles.meInfoContainer}>
