@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles/Navbar.module.css';
 import ClickableIcon from './ClickableIcon';
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
 const Navbar: React.FC = () => {
@@ -15,6 +15,10 @@ const Navbar: React.FC = () => {
 
   const handleEmailIconClick = () => {
     window.location.href = 'mailto:dj.vergara@hotmail.com';
+  };
+
+  const handleTelegramIconClick = () => {
+    window.open('https://t.me/DylanVergara', '_blank');
   };
 
   return ( 
@@ -39,6 +43,7 @@ const Navbar: React.FC = () => {
             <ClickableIcon onClick={handleGitHubIconClick} size={25} color='#3e5954' icon={FaGithub}/>
             <ClickableIcon onClick={handleLinkedinIconClick} size={25} color='#3e5954' icon={FaLinkedin}/>
             <ClickableIcon onClick={handleEmailIconClick} size={28} color='#3e5954' icon={IoMdMail}/>
+            <ClickableIcon onClick={handleTelegramIconClick} size={25} color='#3e5954' icon={FaTelegram}/>
           </div>
         </div>         
       </section>          

@@ -20,7 +20,7 @@
     max-width: fit-content;
     text-align: center;
 
-    background-image: linear-gradient(to right, var(--mint-green), var(--dark-green)); 
+    background-image: linear-gradient(to right, var(--mint-green), var(--light-blue)); 
     color: transparent;
     background-clip: text; 
     -webkit-background-clip: text;
@@ -162,6 +162,15 @@
 }
 
 .projectDescription b {
+    color: var(--mint-green);
+}
+
+.GIA_Link {
+    color: var(--light-blue);
+    font-style: italic;
+}
+
+.GIA_Link:hover {
     color: var(--mint-green);
 }
 

@@ -183,6 +183,10 @@
         flex: 1;
     }
 
+    .userImage {
+        width: 100%;
+    }
+
     .portraitContainer {
         display: none;
     }
